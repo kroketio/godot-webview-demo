@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://nu48hdel0n03"]
+
+[ext_resource type="Script" path="res://scripts/viewhelper.gd" id="1_7wqex"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2p4mj"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.148702, 0.148702, 0.148702, 1)
+albedo_texture_force_srgb = true
+texture_repeat = false
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_76t6x"]
+material = SubResource("StandardMaterial3D_2p4mj")
+size = Vector2(4, 2.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6r7t"]
+size = Vector3(4, 0.02, 2.25)
+
+[node name="viewmonitor" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_76t6x")
+script = ExtResource("1_7wqex")
+
+[node name="Area3D" type="Area3D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_c6r7t")
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
