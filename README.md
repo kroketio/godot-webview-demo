@@ -72,3 +72,11 @@ func _input(event):
         res = handle_key_event(event)
         $WebView.key_event(res['keycode'], res['event_type'], res['text'])
 ```
+
+## Documentation
+
+For more information, checkout the [website](https://github.com/kroketio/godot-webview-demo)
+
+For help or feedback, reach out via:
+- [Discord](https://discord.gg/jjuyfgbE7m)
+- [Github issue tracker](https://github.com/kroketio/godot-webview-meta/issues)
