@@ -7,10 +7,11 @@
 
 ## Information
 
-This demo has 2 scenes:
+This demo has 3 scenes, in `scenes/`.
 
-1. the main scene, a 3D plane with a webview applied to it
-2. the input example scene, which showcases catching mouse events
+1. A 3D plane with a webview applied to it
+2. A 2D example of a TextureRect filling the whole screen, has mouse and keyboard support
+3. mouse input example scene, handy for debugging mouse events
 
 Switching between them can be done over at `Project -> Project Settings -> Application -> Run`.
 
