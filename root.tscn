@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://6k6ir5yahknp"]
+
+[ext_resource type="Script" uid="uid://1unki8xkrthw" path="res://camera_3d.gd" id="1_pq8q7"]
+[ext_resource type="Script" uid="uid://cum27his0st88" path="res://root.gd" id="1_pyidc"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pq8q7"]
+size = Vector2(4, 2.25)
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_pyidc")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.947935, -0.0974426, 0.303189, 0, 0.952039, 0.305978, -0.318463, -0.290047, 0.902471, 1.25758, 0.772959, 1.99665)
+script = ExtResource("1_pq8q7")
+
+[node name="WebView" type="WebView" parent="."]
+url = "https://godotengine.org/releases/4.3/"
+resolution = Vector2(3840, 2160)
+Percentage = 300
+
+[node name="mesh" type="MeshInstance3D" parent="WebView"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_pq8q7")
+
+[node name="info" type="TextEdit" parent="."]
+offset_right = 580.0
+offset_bottom = 67.0
+text = "Hold right-click and WASD to fly around with the camera
+Enable \"capture keys\" in the webview inspector to capture keys"
