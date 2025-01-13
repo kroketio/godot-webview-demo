@@ -1,0 +1,23 @@
+<html>
+<body>
+<h1>{{ title }}</h1>
+
+{% if foo %}
+<p>foo was true</p>
+{% else %}
+<p>foo was false</p>
+{% endif %}
+
+<ul>
+{% for val in bar.items %}
+  <li>{{ val }}</li>
+{% endfor %}
+</ul>
+
+<ul>
+<li>num: {{ num + 0.7 }}</li>
+<li>vector: {{ vec.x | round(2) }}, {{ vec.y | round(2) }}</li>
+</li>
+
+</body>
+</html>

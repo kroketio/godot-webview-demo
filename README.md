@@ -5,6 +5,11 @@
 3. Open the project in Godot 4.4-dev7
 4. Run the project, use WASD to move around, right mouse click to look
 
+There are 2 scenes:
+
+1. The main scene displays a WebView on a 3D plane
+2. The jinja2 scene showcases jinja2 rendering
+
 ## Mac OS: Metal
 
 important: this project is configured to use Vulkan. On Mac OS, only the 
